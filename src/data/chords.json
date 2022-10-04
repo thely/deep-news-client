@@ -1,0 +1,20 @@
+{
+  "file": "/audio/chords.mp3",
+  "spritemap": {
+    "DN_Chord1_Stretch1": {
+      "start": 0,
+      "end": 152.91734693877552,
+      "loop": false
+    },
+    "DN_Chord2_Stretch1": {
+      "start": 154,
+      "end": 263.5680045351474,
+      "loop": false
+    },
+    "DN_Chord3_Stretch1": {
+      "start": 265,
+      "end": 388.22133786848076,
+      "loop": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "file": "/audio/notes.mp3",
+  "spritemap": {
+    "DN__A": {
+      "start": 0,
+      "end": 0.44117913832199546,
+      "loop": false
+    },
+    "DN__B": {
+      "start": 2,
+      "end": 2.4411791383219956,
+      "loop": false
+    },
+    "DN__C": {
+      "start": 4,
+      "end": 4.441179138321996,
+      "loop": false
+    },
+    "DN__D": {
+      "start": 6,
+      "end": 6.441179138321996,
+      "loop": false
+    },
+    "DN__E": {
+      "start": 8,
+      "end": 8.441179138321996,
+      "loop": false
+    },
+    "DN__G": {
+      "start": 10,
+      "end": 10.441179138321996,
+      "loop": false
+    }
+  }
+}
