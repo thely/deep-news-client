@@ -12,6 +12,7 @@ const chat = {
     bannedWords: [],
     messageCount: 0,
     recentReact: false,
+    messageLimit: parseInt(process.env.VUE_APP_MSG_LIMIT),
   }),
   mutations: {
     SOCKET_ADDUSER(state, obj) {
@@ -69,7 +70,7 @@ const chat = {
 
       state.messageCount++;
 
-      if (state.messages.length > 20) {
+      if (state.messages.length > state.messageLimit) {
         state.messages.shift();
         this.dispatch("market/analyseForStockRemoval", state.messages.map((e) => e.text), { root: true });
       }
