@@ -51,17 +51,23 @@ export default {
     userID() {
       return this.$store.state.chat.userID;
     },
+    lastMessageID() {
+      return this.$store.getters["chat/getLastMessageID"];
+    },
     currentStock() {
       return this.$store.state.market.selectedStock;
     }
   },
   watch: {
-    messages() {
+    lastMessageID() {
       this.$nextTick(() => {
-        this.$refs.msgParent.lastChild.scrollIntoView({ 
-          block: "end", behavior: "smooth" 
-        });
-      });
+        if (this.$refs.msgParent.children.length > 0) {  
+          console.log("we should scroll");
+          this.$refs.msgParent.lastChild.scrollIntoView({ 
+            block: "end", behavior: "smooth" 
+          });
+        }
+      })
     },
     width(newV, oldV) {
       this.widthCalc(newV, oldV);
