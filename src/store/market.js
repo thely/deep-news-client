@@ -12,6 +12,8 @@ const market = {
     portfolio: {},
     selectedStock: "",
     openPopup: false,
+    recentAdd: "",
+    recentRemove: "",
   }),
   mutations: {
     SOCKET_ADDUSER(state, obj) {
@@ -26,6 +28,8 @@ const market = {
         state.selectedStock = data.stock;
         state.stockIDs.push(data.id);
         Vue.set(state.portfolio, data.stock, 0);
+
+        state.recentAdd = data.stock;
       }
     },
 
@@ -108,6 +112,7 @@ const market = {
 
         state.selectedStock = state.stockWords.length > 0 ? state.stockWords[0] : "";
         state.changePopupState = false;
+        state.recentRemove = word;
       }
     },
     buyStock(state, obj) {

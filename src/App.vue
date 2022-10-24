@@ -7,6 +7,7 @@
     <StockPopup />
     <NewsTicker />
     <Tutorial @endTutorial="enableAudioManager = true" />
+    <StockEventJumper />
     <!-- <v-idle @idle="onIdle" /> -->
   </div>
 </template>
@@ -20,6 +21,7 @@ import StockPopup from './components/StockPopup.vue';
 import AudioManager from './components/AudioManager.vue';
 import TVGroup from './components/TVGroup.vue';
 import Tutorial from './components/Tutorial.vue';
+import StockEventJumper from './components/StockEventJumper.vue';
 
 // https://en.wikipedia.org/wiki/Special:RandomInCategory/Category:Member_states_of_the_United_Nations
 
@@ -33,7 +35,8 @@ export default {
     NewsTicker,
     AudioManager,
     TVGroup,
-    Tutorial
+    Tutorial,
+    StockEventJumper
 },
   data() {
     return {
@@ -152,6 +155,6 @@ body {
   width: 100vw;
   height: 100vh;
   max-width: 100vw;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 </style>
