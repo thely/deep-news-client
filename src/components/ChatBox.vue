@@ -1,6 +1,6 @@
 <template>
   <div class="chat-block">
-    <ChannelMarker :channel="'MSGS'" />
+    <ChannelMarker :channel="$t('blocks.msgs')" />
     <ChatNameChange />
     <ChatMessageList :width="controls.freqVal"/>
     <ChatMessageInput />

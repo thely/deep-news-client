@@ -11,7 +11,7 @@
       <span>${{ parseFloat(stocks[current].slice(-1)[0]).toFixed(2) }}</span>
     </div>
     <canvas id="myChart" width="390" height="200" :class="initialized ? '' : 'canvas-active'"></canvas>
-    <span>funds: ${{ funds }}</span>
+    <span>{{ $t('stocks.funds') }}: ${{ funds }}</span>
   </div>
 </template>
 

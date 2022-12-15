@@ -1,0 +1,74 @@
+{
+  "en": {
+    "blocks": {
+      "msgs": "MSGS",
+      "ch": "CH",
+      "standby": "standby"
+    },
+    "chat": {
+      "name": "You are: ",
+      "placeholder": "What's on your mind?",
+      "send": "Share",
+      "censor": "{0} has been delisted. Please choose a better word."
+    },
+    "stocks": {
+      "funds": "funds",
+      "haveShares": "You have {0} shares in \"{1}.\"",
+      "noShares": "You don't have any \"{0}\" shares.",
+      "buy": "Buy",
+      "sell": "Sell"
+    },
+    "greetings":
+      "Welcome to \"fake or far away.\" Please be advised that this piece incorporates (relaxing) sound and potentially flashing colors. Press \"Begin\" to view a short guide to the piece."
+    ,
+    "buttons": {
+      "next": "Next",
+      "begin": "Begin",
+      "finish": "Finish"
+    },
+    "tutorial": [
+      "Type out a message to talk to your friend.",
+      "Who are you, anyway?",
+      "Some of the words in these messages are underlined. Try clicking on one of them.",
+      "Looks like \"{0}\" got turned into a stock on the market. Why don't you try investing?",
+      "Investing has a huge effect on the market. How much money can you make?",
+      "Looks like investing also changes how the news looks. Can you perform the visuals?",
+      "The chat has a message limit. What happens if one of the stocks disappears from the chat? Hmm..."
+    ]
+  },
+  "de": {
+    "blocks": {
+      "msgs": "CHAT",
+      "ch": "CH",
+      "standby": "standby"
+    },
+    "chat": {
+      "name": "Du bist: ",
+      "placeholder": "Was machst du gerade?",
+      "send": "Senden",
+      "censor": "{0} wurde aus dem Aktienmarkt entfernt. Bitte wähle ein besseres Wort."
+    },
+    "stocks": {
+      "funds": "Finanzmittel",
+      "haveShares": "Du hast {0} Aktienanteile an \"{1}.\"",
+      "noShares": "Du hast keine Aktienanteile von \"{0}.\"",
+      "buy": "Kaufen",
+      "sell": "Verkaufen"
+    },
+    "buttons": {
+      "next": "Nächste",
+      "begin": "Start",
+      "finish": "Fertig"
+    },
+    "greetings": "Herzlich willkommen bei \"fake or far away.\" Ein Hinweis vorweg: \"fake or far away\" enthält (entspannende) Musik und möglicherweise auch rasch blinkende Farbwechsel. Klicke auf \"Start\", um die Musik anzuschalten.",
+    "tutorial": [
+      "Nachricht hier eingeben, um mit miteinander zu chatten.",
+      "Wer bist du eigentlich?",
+      "Some of the words are underlined. Try clicking on one.",
+      "Sieht ganz so aus, als ob \"{0}\" zu einer Aktie auf dem Aktienmarkt geworden ist. Warum versuchst nicht mal zu investieren?",
+      "Investitionen haben einen großen Einfluss auf den Aktienmarkt. Wie viel Geld kannst du wohl damit verdienen?",
+      "Sieht ganz so aus, als ob Investitionen die Art und Weise verändern wie hier die Nachrichten angezeigt werden. Kannst du das Bildmaterial vielleicht sogar beeinflussen?",
+      "Der Chat hat ein Nachrichtenlimit. Was passiert eigentlich, wenn eine der Aktien aus dem Chat verschwindet? Hmm ..."
+    ]
+  }
+}

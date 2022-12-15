@@ -63,7 +63,7 @@ export default {
       var currPlayer = parseInt(e.target.dataset.player);
 
       if (this.activePlayer == currPlayer) {
-        console.log("are you seeking inside the video rn?");
+        // console.log("are you seeking inside the video rn?");
         return;
       }
       var currLoader = parseInt(e.target.dataset.loader);
@@ -86,8 +86,8 @@ export default {
     },
 
     videoEnded(e) {
-      console.log("video ended");
-      console.log(e);
+      // console.log("video ended");
+      // console.log(e);
 
       const sibling = e.target.dataset.player == 0 ? e.target.nextSibling : e.target.previousSibling;
       sibling.play();
@@ -95,7 +95,7 @@ export default {
     },
 
     videoLoading(e) {
-      console.log("data loaded for " + e.target.dataset.player);
+      // console.log("data loaded for " + e.target.dataset.player);
       const playIndex = e.target.dataset.player;
       if (playIndex == 0 && !this.isLoaded[playIndex]) {
         // e.target.volume = 0;

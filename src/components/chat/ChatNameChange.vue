@@ -1,6 +1,6 @@
 <template>
   <div class="chat-name">
-    <h4>You are: 
+    <h4>{{$t('chat.name')}}
       <span v-show="!changeActive" class="username-display" @click="openField">{{ name }}</span>
       <form v-show="changeActive" class="username-change" action="" @submit.prevent="changeName">
         <input type="text" class="username-text" ref="textInput" v-model="tempName" />
@@ -46,6 +46,8 @@ export default {
 
 <style lang="scss">
 .chat-name {
+  display: flex;
+  justify-content: center;
   font-family: var(--chat-font);
   padding: 1em;
   

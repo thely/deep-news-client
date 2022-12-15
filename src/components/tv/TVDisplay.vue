@@ -66,14 +66,14 @@ export default {
     initPatch(player) {
       // pause the change very slightly for chrome
       setTimeout(() => {
-        console.log("starting patch");
+        // console.log("starting patch");
         hydra.videoNotify(player, this.index);
         hydra.runOne(this.index);
       }, 100);
       
     },
     switchPatch(player) {
-      console.log("switching player");
+      // console.log("switching player");
       // setTimeout(() => {
         hydra.videoNotify(player, this.index);
       // }, 100);

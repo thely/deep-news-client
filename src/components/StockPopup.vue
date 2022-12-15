@@ -2,8 +2,8 @@
   <div v-if="isPopupOpen" class="stock-word-parent popup-parent" v-click-outside="hideDisplay">
     <h3>{{ currentStock }}</h3>
     <p>
-      <span v-if="shares > 0">You have {{ shares }} shares in "{{ currentStock }}."</span>
-      <span v-else>You have no "{{ currentStock }}" shares.</span>
+      <span v-if="shares > 0"> {{ $t('stocks.haveShares', [shares, currentStock]) }}</span>
+      <span v-else>{{ $t('stocks.noShares', [currentStock]) }}</span>
     </p>
     
     <div class="price-block-parent">
@@ -12,7 +12,7 @@
         <ul class="seller-list">
           <li v-for="(seller, index) in sellers" :key="index">
             <span>${{ seller }}</span>
-            <button @click="buyStock($event, seller, index)" :disabled="seller > funds">Buy</button>
+            <button @click="buyStock($event, seller, index)" :disabled="seller > funds">{{ $t('stocks.buy') }}</button>
           </li>
         </ul>
       </div>
@@ -23,7 +23,7 @@
           <ul class="buyer-list seller-list">
             <li v-for="(buyer, index) in buyers" :key="index">
               <span>${{ buyer }}</span>
-              <button @click="sellStock($event, buyer)">Sell</button>
+              <button @click="sellStock($event, buyer)">{{ $t('stocks.sell') }}</button>
             </li>
           </ul>
         </div>

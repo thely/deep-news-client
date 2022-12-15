@@ -1,6 +1,6 @@
 <template>
   <div class="ban-warning">
-    <p>{{ word }} was delisted. Please choose a different word.</p>
+    <p>{{ $t('chat.censor', [word]) }}</p>
   </div>
 </template>
 

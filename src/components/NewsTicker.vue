@@ -1,7 +1,7 @@
 <template>
   <div class="ticker-wrap">
     <marquee-text v-if="stockWords.length <= 0" :repeat="10" :duration="30" :key="changeCount">
-      <div class="item" >... standby ...</div>
+      <div class="item" >... {{ $t("blocks.standby") }} ...</div>
     </marquee-text>
     <marquee-text v-else :repeat="stockWords.length == 1 ? 10 : stockWords.length > 3 ? 2 : 4" :duration="30" :key="changeCount">
       <template v-for="(thing, index) in stockList">

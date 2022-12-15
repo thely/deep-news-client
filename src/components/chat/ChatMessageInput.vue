@@ -2,8 +2,8 @@
   <div class="chat-writing">
     <chat-ban-warning v-if="warnWord" :word="warnWord"/>
     <form class="chat-form" action="" @submit.prevent="addMessage">
-      <input v-model="message" type="text" class="chat-input" @keyup="watchInput" placeholder="What's on your mind?" />
-      <button type="submit" class="chat-submit">Share</button>
+      <input v-model="message" type="text" class="chat-input" @keyup="watchInput" :placeholder="$t('chat.placeholder')" />
+      <button type="submit" class="chat-submit">{{$t('chat.send')}}</button>
     </form>
   </div>
 </template>
