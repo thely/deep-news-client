@@ -1,13 +1,17 @@
 <template>
   <div id="app" @click="clickCounter" v-if="hasName">
-    <AudioManager :start="enableAudioManager" />
+    <AudioManager :start="enableAudioManager" :clicks="clickCount"/>
     <ChatBox :controls="controls" />
     <TVGroup v-if="vidFilesExist" :controls="controls" />
     <StockChart v-if="hasStocks" />
     <StockPopup />
     <NewsTicker />
-    <Tutorial @endTutorial="enableAudioManager = true" />
+    <!-- <Tutorial @endTutorial="enableAudioManager = true" /> -->
     <StockEventJumper />
+    <div class="top-controls">
+      <LangSwitcher />
+      <IntroTour @startAudio="enableAudioManager = true"/>
+    </div>
     <!-- <v-idle @idle="onIdle" /> -->
   </div>
 </template>
@@ -20,8 +24,9 @@ import NewsTicker from './components/NewsTicker.vue';
 import StockPopup from './components/StockPopup.vue';
 import AudioManager from './components/AudioManager.vue';
 import TVGroup from './components/TVGroup.vue';
-import Tutorial from './components/Tutorial.vue';
 import StockEventJumper from './components/StockEventJumper.vue';
+import IntroTour from './components/IntroTour.vue';
+import LangSwitcher from './components/LangSwitcher.vue';
 
 // https://en.wikipedia.org/wiki/Special:RandomInCategory/Category:Member_states_of_the_United_Nations
 
@@ -29,14 +34,15 @@ export default {
   name: 'App',
   components: {
     ChatBox,
-    // Xebra,
     StockChart,
     StockPopup,
     NewsTicker,
     AudioManager,
     TVGroup,
-    Tutorial,
-    StockEventJumper
+    // Tutorial,
+    IntroTour,
+    StockEventJumper,
+    LangSwitcher
 },
   data() {
     return {
@@ -84,9 +90,6 @@ export default {
       localStorage.seentut = false;
     }
   },
-  // updated() {
-  //   console.log("main recomputes");
-  // },
   sockets: {
     connect() {
       console.log("connected");
@@ -99,36 +102,6 @@ export default {
     onIdle() {
       this.$store.commit("chat/removeBans");
     },
-    // mediaload(e) {
-    //   const vid = e.target;
-    //   console.log(vid);
-    //   console.log("loaded video");
-    //   const h = new Hydra({
-    //     makeGlobal: false,
-    //     detectAudio: false,
-    //     numSources: 1,
-    //     numOutputs: 1,
-    //     width: 800,
-    //     height: 400
-    //   }).synth;
-
-    //   // use video within hydra
-    //   h.s0.init({src: vid})
-    //   h.src(h.s0)
-    //     .rotate(0, 0.2)
-    //     .repeat(5, 3, 0.5)
-    //     .saturate(3.0)
-    //   //  .color(1.0, 0.7, -1)
-    //     .scrollX(0, -0.1)
-    //     .diff(h.osc(2, 0.3, 2))
-    //   //  .kaleid(3)
-    //     .diff(h.src(h.s0).saturate().hue(0.2))
-    //     .out()
-    // }
-
-    // vid.src = "/video/vid1.mp4";
-    // vid.load();
-    // console.log(vid);
   }
 }
 </script>
@@ -156,5 +129,13 @@ body {
   height: 100vh;
   max-width: 100vw;
   overflow: hidden;
+}
+
+.top-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
 }
 </style>
