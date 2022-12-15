@@ -14,7 +14,6 @@
         <button v-if="index > 0" @click="index--">Prev</button>
         <button v-if="index < pages.length - 1" @click="index++">Next</button>
         <button @click="hideTut" v-else>Begin</button>
-        <!-- <AudioManager @audioStarted="hideTut" v-else>Begin</AudioManager> -->
       </div>
 
     </div>
@@ -22,9 +21,7 @@
 </template>
 
 <script>
-// import AudioManager from './AudioManager.vue'
 export default {
-  // components: { AudioManager },
   data() {
     return {
       pages: pages,
@@ -71,7 +68,7 @@ const pages = [
     title: "Experience",
     text: "As you interact with the page, the sound and appearance of the news will change with you. What will you discover? Hit 'Begin' to get started."
   }
-]
+];
 </script>
 
 <style lang="scss">
@@ -81,7 +78,8 @@ const pages = [
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 200;
@@ -89,7 +87,7 @@ const pages = [
   .tutorial {
     background: white;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.25);
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,6 +114,7 @@ const pages = [
   .img-block {
     margin-top: -3em;
   }
+
   .text-block {
     margin-top: 3em;
   }
@@ -132,12 +131,13 @@ const pages = [
     }
   }
 
-  h2, button {
+  h2,
+  button {
     font-family: var(--mono-font);
   }
+
   p {
     font-family: var(--chat-font);
   }
 }
-
 </style>
