@@ -280,8 +280,8 @@ function userInit(state, obj) {
 function buildChoices(reacts = [], user = -1) {
   let tester = [];
   const allCats = Object.keys(emojis);
-  console.log(JSON.stringify(reacts));
-  console.log(user);
+  // console.log(JSON.stringify(reacts));
+  // console.log(user);
 
   for (let i = 0; i < 4; i++) {
     const c = allCats[Math.floor(Math.random() * allCats.length)];
