@@ -168,6 +168,7 @@ export default {
       });
 
       ref.tour.addSteps(steps);
+      this.tour.start();
       document.addEventListener("keyup", this.pressEscape);
     });
   },

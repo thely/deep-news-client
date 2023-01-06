@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import patchList from "./HydraMixer.js";
-const Hydra = require("hydra-synth");
+import Hydra from "hydra-synth";
 // const loop = require('raf-loop');
 
 class HydraHandle {
