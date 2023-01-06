@@ -33,7 +33,8 @@
       "Looks like \"{0}\" got turned into a stock on the market. Why don't you try investing?",
       "Investing has a huge effect on the market. How much money can you make?",
       "Looks like investing also changes how the news looks. Can you perform the visuals?",
-      "The chat has a message limit. What happens if one of the stocks disappears from the chat? Hmm..."
+      "The chat has a message limit. What happens if one of the stocks disappears from the chat? Hmm...",
+      "Please pick your language. // Bitte wählen Sie Ihre Sprache aus."
     ]
   },
   "de": {
