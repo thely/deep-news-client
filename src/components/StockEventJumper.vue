@@ -1,10 +1,10 @@
 <template>
   <div class="stock-jumper">
     <p class="jump jump-remove" :class="{'active': removeState}">
-      <span><strong>{{ recentRemove }}</strong> was delisted!</span>
+      <span><strong>{{ recentRemove }}</strong> {{ $t('stocks["was_delisted"]')}}</span>
     </p>
     <p class="jump jump-add" :class="{'active': addState}">
-      <span><strong>{{ recentAdd }}</strong> was added!</span>
+      <span><strong>{{ recentAdd }}</strong> {{ $t('stocks["was_added"]')}}</span>
     </p>
   </div>
 </template>

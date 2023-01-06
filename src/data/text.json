@@ -16,7 +16,9 @@
       "haveShares": "You have {0} shares in \"{1}.\"",
       "noShares": "You don't have any \"{0}\" shares.",
       "buy": "Buy",
-      "sell": "Sell"
+      "sell": "Sell",
+      "was_added": "was added!",
+      "was_delisted": "was delisted!"
     },
     "greetings":
       "Welcome to \"fake or far away.\" Please be advised that this piece incorporates (relaxing) sound and potentially flashing colors. Press \"Begin\" to view a short guide to the piece."
@@ -54,7 +56,9 @@
       "haveShares": "Du hast {0} Aktienanteile an \"{1}.\"",
       "noShares": "Du hast keine Aktienanteile von \"{0}.\"",
       "buy": "Kaufen",
-      "sell": "Verkaufen"
+      "sell": "Verkaufen",
+      "was_added": "wurde hinzugefügt!",
+      "was_delisted": "wurde entfernt!"
     },
     "buttons": {
       "next": "Nächste",
@@ -65,7 +69,7 @@
     "tutorial": [
       "Nachricht hier eingeben, um mit miteinander zu chatten.",
       "Wer bist du eigentlich?",
-      "Some of the words are underlined. Try clicking on one.",
+      "Einige der Wörter in den Messages sind unterstrichen. Versuche doch mal, auf eines dieser Wörter zu klicken.",
       "Sieht ganz so aus, als ob \"{0}\" zu einer Aktie auf dem Aktienmarkt geworden ist. Warum versuchst nicht mal zu investieren?",
       "Investitionen haben einen großen Einfluss auf den Aktienmarkt. Wie viel Geld kannst du wohl damit verdienen?",
       "Sieht ganz so aus, als ob Investitionen die Art und Weise verändern wie hier die Nachrichten angezeigt werden. Kannst du das Bildmaterial vielleicht sogar beeinflussen?",
