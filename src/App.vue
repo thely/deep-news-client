@@ -10,9 +10,9 @@
     <StockEventJumper />
     <div class="top-controls">
       <LangSwitcher />
-      <IntroTour @startAudio="enableAudioManager = true"/>
+      <IntroTour @startAudio="enableAudioManager = true" :idling="idling"/>
     </div>
-    <!-- <v-idle @idle="onIdle" /> -->
+    <v-idle :duration="30" @idle="onIdle" />
   </div>
 </template>
 
@@ -27,8 +27,6 @@ import TVGroup from './components/TVGroup.vue';
 import StockEventJumper from './components/StockEventJumper.vue';
 import IntroTour from './components/IntroTour.vue';
 import LangSwitcher from './components/LangSwitcher.vue';
-
-// https://en.wikipedia.org/wiki/Special:RandomInCategory/Category:Member_states_of_the_United_Nations
 
 export default {
   name: 'App',
@@ -49,6 +47,7 @@ export default {
       vidFilesExist: false,
       clickCount: 0,
       enableAudioManager: false,
+      idling: false,
     }
   },
   computed: {
@@ -100,7 +99,9 @@ export default {
       this.clickCount++;
     },
     onIdle() {
-      this.$store.commit("chat/removeBans");
+      console.log("you've idled!");
+      this.idling = true;
+      // this.$store.commit("chat/removeBans");
     },
   }
 }
