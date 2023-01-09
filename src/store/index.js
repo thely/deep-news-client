@@ -38,14 +38,28 @@ export default new Vuex.Store({
     updateMod(state, val) {
       state.modVal = val;
       // console.log(state.freqVal);
-    },
+    }
     // triggerMouse(state, val) {
     //   val = val == null ? !state.mouseDown : val;
     //   state.mouseDown = val;
     //   // console.log(state.mouseDown);
     // }
   },
-  getters: {
-   
+  actions: {
+    resetUser({state}, isIdle=true) {
+      console.log("inside resetuser!");
+      const obj = {
+        userid: state.chat.userID,
+        socket: state.chat.selfID,
+        state: isIdle
+      };
+
+      Vue.prototype.$socket.client.emit("idleUser", obj);
+    },
+    socket_resetAll({commit}) {
+      console.log("we're being told to kill everything. start fresh!!");
+      commit("chat/resetChat");
+      commit("market/resetMarket");
+    }
   }
 });

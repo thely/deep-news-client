@@ -6,18 +6,17 @@
     <StockChart v-if="hasStocks" />
     <StockPopup />
     <NewsTicker />
-    <!-- <Tutorial @endTutorial="enableAudioManager = true" /> -->
     <StockEventJumper />
+
     <div class="top-controls">
       <LangSwitcher />
       <IntroTour @startAudio="enableAudioManager = true" :idling="idling"/>
     </div>
-    <v-idle :duration="30" @idle="onIdle" />
+    <v-idle @idle="onIdle" @wake="onWake"/>
   </div>
 </template>
 
 <script>
-/* eslint-disable vue/no-unused-components */
 import ChatBox from './components/ChatBox.vue';
 import StockChart from './components/StockChart.vue';
 import NewsTicker from './components/NewsTicker.vue';
@@ -37,7 +36,6 @@ export default {
     NewsTicker,
     AudioManager,
     TVGroup,
-    // Tutorial,
     IntroTour,
     StockEventJumper,
     LangSwitcher
@@ -101,8 +99,17 @@ export default {
     onIdle() {
       console.log("you've idled!");
       this.idling = true;
-      // this.$store.commit("chat/removeBans");
+
+      this.$store.dispatch("resetUser");
     },
+    onWake() {
+      if (!this.idling) {
+        return;
+      }
+      this.idling = false;
+      console.log("wake up!!");
+      this.$store.dispatch("resetUser", false);
+    }
   }
 }
 </script>

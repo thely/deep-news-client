@@ -16,6 +16,26 @@ const market = {
     recentRemove: "",
   }),
   mutations: {
+    resetUser(state) {
+      state.portfolio = {};
+      state.funds = 1000;
+    },
+
+    resetMarket(state) {
+      state.portfolio = {};
+      state.funds = 1000;
+      state.stockWords = [];
+      state.stockIDs = [];
+      state.closePrices = [];
+      state.prevClosePrices = [];
+      state.totalShares = [];
+      state.portfolio = {};
+      state.selectedStock = "";
+      state.recentAdd = "";
+      state.recentRemove = "";
+      state.openPopup = false;
+    },
+
     SOCKET_ADDUSER(state, obj) {
       if (obj.isSelf && "funds" in obj && obj.funds != null) {
         state.funds = obj.funds;
@@ -221,7 +241,11 @@ const market = {
       });
       
       commit("chat/banWords", toRemove, { root: true });
-    }
+    },
+    // socket_fullReset({ commit }) {
+    //   commit("resetUser");
+    //   commit("resetState");
+    // },
   }
 }
 

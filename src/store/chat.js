@@ -8,13 +8,18 @@ const chat = {
     selfID: "", // socket port
     userID: -1, // actual number
     messages: [],
-    // rules: { worm: "wood", butter: "cream" },
     bannedWords: [],
     messageCount: 0,
     recentReact: false,
     messageLimit: parseInt(process.env.VUE_APP_MSG_LIMIT),
   }),
   mutations: {
+    resetChat(state) {
+      state.messages = [];
+      state.bannedWords = [];
+      state.messageCount = 0;
+      state.recentReact = false;
+    },
     SOCKET_ADDUSER(state, obj) {
       console.log("get user");
       // let name = "";
