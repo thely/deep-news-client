@@ -4,7 +4,8 @@ import Vue from 'vue'
 import VueSocketIOExt from 'vue-socket.io-extended';
 import io from 'socket.io-client';
 import MarqueeText from 'vue-marquee-text-component';
-import Vidle from 'v-idle';
+// import Vidle from 'v-idle';
+import Vidle from './utils/vidle.min.js';
 import VueCookies from 'vue-cookies';
 import VueI18n from 'vue-i18n';
 import VueShepherd from 'vue-shepherd';

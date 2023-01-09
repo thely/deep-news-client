@@ -17,7 +17,6 @@
     "shepherd.js": "^11.0.1",
     "socket.io-client": "^4.4.1",
     "tone": "^14.7.77",
-    "v-idle": "^0.2.1",
     "vue": "^2.6.11",
     "vue-cookies": "^1.8.1",
     "vue-i18n": "^8.28.2",
