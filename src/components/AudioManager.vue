@@ -57,6 +57,8 @@ export default {
       }
 
       const senderIsOther = this.$store.getters['chat/getLastMessageSender'];
+      if (senderIsOther == -1) return;
+      
       console.log(senderIsOther);
       if (senderIsOther && newV % 3 != 1) {
         console.log("from other!");

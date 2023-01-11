@@ -224,6 +224,8 @@ const chat = {
       return state.messages[state.messages.length - 1].text.length;
     },
     getLastMessageSender: (state) => {
+      if (state.messages.length <= 0) return -1;
+      
       const id = state.messages[state.messages.length - 1].id;
       if (id != state.selfID) {
         return true;
